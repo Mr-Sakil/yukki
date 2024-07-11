@@ -57,10 +57,10 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("TheYukki")
-                await self.one.join_chat("YukkiSupport")
-                await self.one.join_chat("TheTeamVivek")
-                await self.one.join_chat("TheTeamVk")
+                await self.one.join_chat("Vip_Sakil_Bio")
+                await self.one.join_chat("FellingThroughShayari")
+                await self.one.join_chat("Vip_Sakil_Bio")
+                await self.one.join_chat("FellingThroughShayari")
             except:
                 pass
             assistants.append(1)
@@ -84,10 +84,10 @@ class Userbot(Client):
         if config.STRING2:
             await self.two.start()
             try:
-                await self.two.join_chat("TheYukki")
-                await self.two.join_chat("YukkiSupport")
-                await self.two.join_chat("TheTeamVivek")
-                await self.two.join_chat("TheTeamVk")
+                await self.one.join_chat("Vip_Sakil_Bio")
+                await self.one.join_chat("FellingThroughShayari")
+                await self.one.join_chat("Vip_Sakil_Bio")
+                await self.one.join_chat("FellingThroughShayari")
             except:
                 pass
             assistants.append(2)
@@ -111,10 +111,10 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.three.join_chat("TheYukki")
-                await self.three.join_chat("YukkiSupport")
-                await self.three.join_chat("TheTeamVivek")
-                await self.three.join_chat("TheTeamVk")
+                await self.one.join_chat("Vip_Sakil_Bio")
+                await self.one.join_chat("FellingThroughShayari")
+                await self.one.join_chat("Vip_Sakil_Bio")
+                await self.one.join_chat("FellingThroughShayari")
             except:
                 pass
             assistants.append(3)
@@ -138,10 +138,10 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.four.join_chat("TheYukki")
-                await self.four.join_chat("YukkiSupport")
-                await self.four.join_chat("TheTeamVivek")
-                await self.four.join_chat("TheTeamVk")
+                await self.one.join_chat("Vip_Sakil_Bio")
+                await self.one.join_chat("FellingThroughShayari")
+                await self.one.join_chat("Vip_Sakil_Bio")
+                await self.one.join_chat("FellingThroughShayari")
             except:
                 pass
             assistants.append(4)
@@ -165,10 +165,10 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("TheYukki")
-                await self.five.join_chat("YukkiSupport")
-                await self.five.join_chat("TheTeamVivek")
-                await self.five.join_chat("TheTeamVk")
+                await self.one.join_chat("Vip_Sakil_Bio")
+                await self.one.join_chat("FellingThroughShayari")
+                await self.one.join_chat("Vip_Sakil_Bio")
+                await self.one.join_chat("FellingThroughShayari")
             except:
                 pass
             assistants.append(5)
