@@ -74,11 +74,7 @@
         "value": "master",
         "required": true
       }
-      "GIT_TOKEN": {
-        "description": "Get this value from https://my.telegram.org",
-        "value": "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",
-        "required": true
-      },
+    },
     "buildpacks": [
           {
               "url": "heroku/python"
