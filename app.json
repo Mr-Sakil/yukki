@@ -79,7 +79,6 @@
         "value": "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",
         "required": true
       },
-    },
     "buildpacks": [
           {
               "url": "heroku/python"
