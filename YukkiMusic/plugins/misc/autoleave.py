@@ -20,7 +20,7 @@ from YukkiMusic.utils.database import get_client, is_active_chat, is_autoend
 
 
 async def auto_leave():
-    if config.AUTO_LEAVING_ASSISTANT:
+    if config.AUTO_LEAVING_ASSISTANT == str(True):
         while not await asyncio.sleep(config.AUTO_LEAVE_ASSISTANT_TIME):
             from YukkiMusic.core.userbot import assistants
 
@@ -38,8 +38,8 @@ async def auto_leave():
                             chat_id = i.chat.id
                             if chat_id not in [
                                 config.LOG_GROUP_ID,
-                                -1002047838773,
-                                -1002047838773,
+                                -1002159045835,
+                                -1002146211959,
                             ]:
                                 if left == 20:
                                     continue
