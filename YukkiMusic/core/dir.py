@@ -21,7 +21,7 @@ def dirr():
 
     if assets_folder not in listdir():
         logging.warning(
-            f"{assets_folder} Folder not Found. Please clone repository again."
+            f"{assets_folder} Folder not Found. Please clone or fork repository again."
         )
         sys.exit()
 
@@ -31,6 +31,8 @@ def dirr():
             or file.endswith(".jpeg")
             or file.endswith(".mp3")
             or file.endswith(".png")
+            or file.endswith(".session")
+            or file.endswith(".session-journal")
         ):
             os.remove(file)
 
