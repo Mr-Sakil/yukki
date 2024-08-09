@@ -27,5 +27,6 @@ Resso = RessoAPI()
 Telegram = TeleAPI()
 YouTube = YouTubeAPI()
 YTB = YTM()
+HELPABLE = {}
 
 APP = "UMIKO_CHAT_BOT"  # connect music api key "Dont change it"
