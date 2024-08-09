@@ -1,4 +1,3 @@
-
 import asyncio
 import os
 from datetime import datetime, timedelta
@@ -21,9 +20,9 @@ from pytgcalls.types import (
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from BrandrdXMusic import LOGGER, YouTube, app, YTB
-from BrandrdXMusic.misc import db
-from BrandrdXMusic.utils.database import (
+from YukkiMusic import LOGGER, YouTube, app, YTB
+from YukkiMusic.misc import db
+from YukkiMusic.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,
@@ -35,11 +34,11 @@ from BrandrdXMusic.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from BrandrdXMusic.utils.exceptions import AssistantErr
-from BrandrdXMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
-from BrandrdXMusic.utils.inline.play import stream_markup, stream_markup2
-from BrandrdXMusic.utils.stream.autoclear import auto_clean
-from BrandrdXMusic.utils.thumbnails import get_thumb
+from YukkiMusic.utils.exceptions import AssistantErr
+from YukkiMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
+from YukkiMusic.utils.inline.play import stream_markup, stream_markup2
+from YukkiMusic.utils.stream.autoclear import auto_clean
+from YukkiMusic.utils.thumbnails import get_thumb
 from strings import get_string
 
 autoend = {}
@@ -54,9 +53,9 @@ async def _clear_(chat_id):
 
 
 class Call(PyTgCalls):
-    def init(self):
+    def __init__(self):
         self.userbot1 = Client(
-            name="BrandrdXMusic1",
+            name="YukkiMusic1",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING1),
@@ -66,7 +65,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot2 = Client(
-            name="BrandrdXMusic2",
+            name="YukkiMusic2",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING2),
@@ -76,7 +75,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot3 = Client(
-            name="BrandrdXMusic3",
+            name="YukkiMusic3",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING3),
@@ -86,7 +85,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot4 = Client(
-            name="BrandrdXMusic4",
+            name="YukkiMusic4",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING4),
@@ -96,7 +95,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot5 = Client(
-            name="BrandrdXMusic5",
+            name="YukkiMusic5",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING5),
@@ -135,7 +134,7 @@ class Call(PyTgCalls):
         except:
             pass
 
-async def stop_stream_force(self, chat_id: int):
+    async def stop_stream_force(self, chat_id: int):
         try:
             if config.STRING1:
                 await self.one.leave_group_call(chat_id)
@@ -248,7 +247,7 @@ async def stop_stream_force(self, chat_id: int):
         except:
             pass
 
-async def skip_stream(
+    async def skip_stream(
         self,
         chat_id: int,
         link: str,
@@ -364,8 +363,7 @@ async def skip_stream(
             if loop == 0:
                 popped = check.pop(0)
             else:
-
-loop = loop - 1
+                loop = loop - 1
                 await set_loop(chat_id, loop)
             await auto_clean(popped)
             if not check:
@@ -459,8 +457,7 @@ loop = loop - 1
                     stream = MediaStream(
                         file_path,
                         audio_parameters=AudioQuality.HIGH,
-
-video_parameters=VideoQuality.SD_480p,
+                        video_parameters=VideoQuality.SD_480p,
                     )
                 else:
                     stream = MediaStream(
@@ -552,8 +549,7 @@ video_parameters=VideoQuality.SD_480p,
                         ),
                         caption=_["stream_1"].format(
                             config.SUPPORT_CHAT, title[:23], check[0]["dur"], user
-
-),
+                        ),
                         reply_markup=InlineKeyboardMarkup(button),
                     )
                     db[chat_id][0]["mystic"] = run
@@ -602,7 +598,7 @@ video_parameters=VideoQuality.SD_480p,
         return str(round(sum(pings) / len(pings), 3))
 
     async def start(self):
-        LOGGER(name).info("Starting PyTgCalls Client...\n")
+        LOGGER(__name__).info("Starting PyTgCalls Client...\n")
         if config.STRING1:
             await self.one.start()
         if config.STRING2:
