@@ -6,7 +6,7 @@
 # Please see < https://github.com/TheTeamVivek/YukkiMusic/blob/master/LICENSE >
 #
 # All rights reserved.
-
+from SafoneAPI import SafoneAPI
 from YukkiMusic.core.bot import YukkiBot
 from YukkiMusic.core.dir import dirr
 from YukkiMusic.core.git import git
@@ -29,6 +29,7 @@ heroku()
 # Load Sudo Users from DB
 sudo()
 # Bot Client
+api = SafoneAPI()
 app = YukkiBot()
 
 # Assistant Client
