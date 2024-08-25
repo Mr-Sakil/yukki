@@ -26,7 +26,7 @@
       },
       "BOT_TOKEN": {
         "description": "A Bot's token Get it from Botfather",
-        "value": "5799143538:AAGcuDAo5wbM9OK0Plm7B9NFxslK2LUfqcU",
+        "value": "5799143538:AAGxvx8BT6IssUD-_CpNo3GTOYe6XPJCbvg",
         "required": true
       },
       "EXTRA_PLUGINS": {
@@ -51,7 +51,7 @@
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
-        "value": "HRKU-1aae8e6d-38df-4bc2-a122-25d7b90553a6",
+        "value": "HRKU-b3d029bc-fd2e-4712-b6a3-644f181f5136",
         "required": false
       },
       "HEROKU_APP_NAME": {
