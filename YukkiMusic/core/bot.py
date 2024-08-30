@@ -7,6 +7,10 @@
 #
 # All rights reserved.
 #
+import uvloop
+
+uvloop.install()
+
 
 import sys
 from pyrogram import Client
