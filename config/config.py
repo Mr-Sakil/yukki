@@ -80,7 +80,9 @@ OWNER_ID = list(
     map(int, getenv("OWNER_ID", "6024212623").split())
 )  # Input type must be interger
 
-
+PRIVACY_LINK = getenv(
+    "PRIVACY_LINK", "https://telegra.ph/Privacy-Policy-for-YukkiMusic-08-30"
+)
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
